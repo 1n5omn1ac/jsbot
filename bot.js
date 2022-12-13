@@ -38,22 +38,11 @@ const getSubmitButton = () => {
 const runBot = () => {
   //Get the page content
   let pageContent = getPageTextContent();
-
-  //Find the index of 'is' in the page content
   let isIndex = findIsIndex(pageContent);
-
-  //Get the word after 'is' in the page content
   let wordAfterIs = getWordAfterIs(pageContent, isIndex);
-
-  //Get the input field
   let inputField = getInputField();
-
-  //Get the submit button
   let submitButton = getSubmitButton();
-
-  //Input the word after 'is' in the input field
   inputField.value = wordAfterIs;
 
-  //Submit the form
   submitButton.click();
 };
